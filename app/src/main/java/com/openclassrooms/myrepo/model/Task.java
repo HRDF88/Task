@@ -1,5 +1,6 @@
 package com.openclassrooms.myrepo.model;
 
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -13,8 +14,12 @@ public class Task {
      *
      * @param description La description de la tâche.
      */
-    public Task(String description) {
+    public Task(String description, Date dueTime) {
+
         this.description = description;
+
+        this.dueTime = dueTime;
+
     }
 
     /**
@@ -58,4 +63,24 @@ public class Task {
     public int hashCode() {
         return Objects.hash(description);
     }
-}
+
+
+    private Date dueTime;
+
+    public void setDueTime(Date dueTime) {
+        this.dueTime = dueTime;
+    }
+
+    /**
+     * Seter de la classe privée Date généré avec l'IDE
+     * @return
+     */
+    public Date getDueTime() {
+        return dueTime;
+        /**
+         * Geter de la classe privée Date
+         */
+
+
+        }
+    }
